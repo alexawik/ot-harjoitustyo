@@ -1,0 +1,125 @@
+commit 1733816802db551bbc23192ad4ba8ae58b4905d6
+Author: alexawik <alexandra.wikstrom@gmail.com>
+Date:   Tue Mar 19 21:06:34 2019 +0200
+
+    file1 poisto ja file2 muutos file22
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit a624b5f1d611c91290dfcfb2d14e02c99a5c24be
+Author: alexawik <alexandra.wikstrom@gmail.com>
+Date:   Tue Mar 19 21:05:47 2019 +0200
+
+    poisto ja uudelleennimeäminen file1 file22
+
+ tiedostoja/file22 | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 1efb59454574f5e499652335aff8b027b6a380b8
+Author: alexawik <alexandra.wikstrom@gmail.com>
+Date:   Tue Mar 19 20:59:12 2019 +0200
+
+    tiedostoja ja sen sisältö lisätty
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 1c48a7ba0568a400ebbeecb788261a92b17884b1
+Author: alexawik <alexandra.wikstrom@gmail.com>
+Date:   Tue Mar 19 20:53:59 2019 +0200
+
+    tekstiä on poistettu ja lisätty taas
+
+ eka.txt    | 43 -------------------------------------------
+ kolmas.txt |  3 ++-
+ 2 files changed, 2 insertions(+), 44 deletions(-)
+
+commit 0cb491330e6fd37d2d2fb342e93f7016ca9ea038
+Author: alexawik <alexandra.wikstrom@gmail.com>
+Date:   Tue Mar 19 20:49:56 2019 +0200
+
+    tiedosto uudelleennimetty
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 6f1b14675d3558a5ecff77461ec66e03fbfd8a49
+Author: alexawik <alexandra.wikstrom@gmail.com>
+Date:   Tue Mar 19 20:48:37 2019 +0200
+
+    toinen poistettu
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 189b42eb8396f239e90fc30e5b04ab40d5e38e2f
+Author: alexawik <alexandra.wikstrom@gmail.com>
+Date:   Tue Mar 19 20:46:06 2019 +0200
+
+    lisää käsistä
+
+ tiedosto.txt | 196 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 194 insertions(+), 2 deletions(-)
+
+commit 02999845eb0f8af54aa72f5f45c660d1af38f1a4
+Author: alexawik <alexandra.wikstrom@gmail.com>
+Date:   Tue Mar 19 20:42:24 2019 +0200
+
+    tiedosto.txt muutettu
+
+ tiedosto.txt | 285 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 285 insertions(+)
+
+commit 3adb4fba3e18f1a3f2c189fb903184a06cc97e6f
+Author: alexawik <alexandra.wikstrom@gmail.com>
+Date:   Tue Mar 19 20:21:12 2019 +0200
+
+    uusi kansio
+
+ stuff/thestuff.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 1f6ed405663bf191a6859912215e8762ee93a1df
+Author: alexawik <alexandra.wikstrom@gmail.com>
+Date:   Tue Mar 19 20:17:29 2019 +0200
+
+    tekstien muutokset
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit eceedf952f00f9e315d8ff962d7e7255f539b31d
+Author: alexawik <alexandra.wikstrom@gmail.com>
+Date:   Tue Mar 19 20:14:35 2019 +0200
+
+    lisättiin kolmas.txt
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 0579dd9ace95220485f11459759cf165af4155cf
+Author: alexawik <alexandra.wikstrom@gmail.com>
+Date:   Tue Mar 19 20:10:28 2019 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 0d4b80be6d83f8327a592560e8791fc29b0e3e2d
+Author: alexawik <alexandra.wikstrom@gmail.com>
+Date:   Tue Mar 19 20:07:34 2019 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
