@@ -9,3 +9,7 @@ muistiin palauttamiseen sekä uuden opetteluun. Ne onnistuivat
 [komentorivi.txt](https://github.com/alexawik/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
 [gitlog.txt](https://github.com/alexawik/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+
+## Viikko 2
+
+[dokumentointi](https://github.com/alexawik/ot-harjoitustyo/blob/master/dokumentointi.txt)
