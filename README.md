@@ -12,5 +12,5 @@ muistiin palauttamiseen sekä uuden opetteluun. Ne onnistuivat
 
 ## Viikko 2
 
-[dokumentointi](https://github.com/alexawik/ot-harjoitustyo/blob/master/dokumentointi.txt)
+[dokumentointi](https://github.com/alexawik/ot-harjoitustyo/blob/master/dokumentointi/dokumentointi.txt)
 
