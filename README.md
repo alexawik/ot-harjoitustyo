@@ -12,5 +12,6 @@ muistiin palauttamiseen sekä uuden opetteluun. Ne onnistuivat
 
 ## Viikko 2
 
-[dokumentointi](https://github.com/alexawik/ot-harjoitustyo/blob/master/dokumentointi/dokumentointi.md)
+[vaatimusmäärittely](https://github.com/alexawik/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
 
+[työaikakirjanpito](https://github.com/alexawik/ot-harjoitustyo/blob/master/dokumentointi/työkirjanpito.md)
