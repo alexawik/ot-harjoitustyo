@@ -14,6 +14,8 @@
 
 ## Viikko 3
 
+README edelleen tässä muodossa koska olen myöhässä harjoitustyön edistymisen kanssa.
+
 [tehtävä 1&2 kaavio](https://github.com/alexawik/ot-harjoitustyo/blob/master/laskarit/viikko3/teht1%262_monopoli.jpg)
 
 [tehtävä 3 kaavio](https://github.com/alexawik/ot-harjoitustyo/blob/master/laskarit/viikko3/teht3_sekvenssikaavio.jpg)
