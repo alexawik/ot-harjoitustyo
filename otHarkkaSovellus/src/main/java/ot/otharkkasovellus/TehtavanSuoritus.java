@@ -10,13 +10,5 @@ public class TehtavanSuoritus {
         this.tehtava = tehtava;
     }
 
-
-    public Boolean kysymysOikein(String kysymys, String kayttajanVastaus) {
-        if (tehtava.kysymykset().get(kysymys).equals(kayttajanVastaus)) {
-            kayttaja.lisaaPisteita(1);
-            return true;
-        } else {
-            return false;
-        }
-    }
+    
 }

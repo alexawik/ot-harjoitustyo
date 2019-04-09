@@ -2,7 +2,7 @@ package ot.otharkkasovellus;
 
 
 public class Kayttaja extends Kirjautuja {
-    
+    private String kayttaja;
     private int pistemaara;
     
     public Kayttaja(String kayttajatunnus, String salasana) {
@@ -16,4 +16,5 @@ public class Kayttaja extends Kirjautuja {
     public int getPistemaara() {
         return pistemaara;
     }
+    
 }

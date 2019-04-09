@@ -23,8 +23,8 @@ public class Kayttis extends Application{
             label1.setPadding(new Insets(2, 2, 8, 2));
             Button b1 = new Button("Käyttäjä");
             Button b2 = new Button("Uusi käyttäjä");
-            Button b3 = new Button("Admin");
-            VBox set1 = new VBox(label1, b1, b2, b3);
+            //Button b3 = new Button("Admin");
+            VBox set1 = new VBox(label1, b1, b2);
             
             set1.setSpacing(10);
             pane1.getChildren().add(set1);
