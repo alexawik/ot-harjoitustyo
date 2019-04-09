@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class Tehtava {
     private String kuvaus;
-    private HashMap<String,String> kysymyksetVastaukset;
+    private HashMap<String, String> kysymyksetVastaukset = new HashMap<>();
     
     public void setKuvaus(String kuvaus) {
         this.kuvaus = kuvaus;
@@ -25,9 +25,9 @@ public class Tehtava {
     public void poistaKysymys(String kysymys) {
         kysymyksetVastaukset.remove(kysymys);
     }
-    public HashMap<String,String> kysymykset() {
-        return kysymyksetVastaukset;
-        
+    
+    public HashMap<String, String> kysymykset() {
+        return kysymyksetVastaukset;       
     }    
         
 }
