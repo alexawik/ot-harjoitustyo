@@ -1,23 +1,17 @@
-# Ohjelmistotekniikka, harjoitustyö
+# Tehtäväsovellus
 
-## Viikko 1
+Kirjautuneet käyttäjät voivat tehdä musiikin teoriaan liittyviä tehtäviä joista saavat pisteitä.
 
-[komentorivi.txt](https://github.com/alexawik/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
+## Dokumentaatio
 
-[gitlog.txt](https://github.com/alexawik/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+[Vaatimusmäärittely](https://github.com/alexawik/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
 
-## Viikko 2
+[Työkirjanpito](https://github.com/alexawik/ot-harjoitustyo/blob/master/dokumentointi/ty%C3%B6kirjanpito.md)
 
-[vaatimusmäärittely](https://github.com/alexawik/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
+## Komentorivikomennot
 
-[työaikakirjanpito](https://github.com/alexawik/ot-harjoitustyo/blob/master/dokumentointi/työkirjanpito.md)
+Käynnistäminen projektikansiosta komennolla
 
-## Viikko 3
-
-README edelleen tässä muodossa koska olen myöhässä harjoitustyön edistymisen kanssa.
-
-[tehtävä 1&2 kaavio](https://github.com/alexawik/ot-harjoitustyo/blob/master/laskarit/viikko3/teht1%262_monopoli.jpg)
-
-[tehtävä 3 kaavio](https://github.com/alexawik/ot-harjoitustyo/blob/master/laskarit/viikko3/teht3_sekvenssikaavio.jpg)
-
-[tehtävä 4 kaavio](https://github.com/alexawik/ot-harjoitustyo/blob/master/laskarit/viikko3/teht4_sekvenssikaavio.jpg)
+```
+mvn compile exec:java -Dexec.mainClass=ot.otharkkasovellus.Kayttis
+```
