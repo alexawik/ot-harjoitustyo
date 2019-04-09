@@ -6,6 +6,8 @@ Kirjautuneet käyttäjät voivat tehdä musiikin teoriaan liittyviä tehtäviä 
 
 [Vaatimusmäärittely](https://github.com/alexawik/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
 
+[Arkkitehtuurikuvaus](https://github.com/alexawik/ot-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.md)
+
 [Työkirjanpito](https://github.com/alexawik/ot-harjoitustyo/blob/master/dokumentointi/ty%C3%B6kirjanpito.md)
 
 ## Komentorivikomennot
