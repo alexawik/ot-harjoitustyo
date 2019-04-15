@@ -14,7 +14,7 @@ public class Kayttis extends Application{
     
     @Override
         public void start(Stage primaryStage) {
-            
+            Kayttajat kayttajat = new Kayttajat(); //toistaiseksi ohjelma luo uuden listan ohjelman käynnistyessä
             // etusivu
             BorderPane layout = new BorderPane();
             FlowPane pane1 = new FlowPane();
@@ -23,8 +23,8 @@ public class Kayttis extends Application{
             label1.setPadding(new Insets(2, 2, 8, 2));
             Button b1 = new Button("Käyttäjä");
             Button b2 = new Button("Uusi käyttäjä");
-            //Button b3 = new Button("Admin");
-            VBox set1 = new VBox(label1, b1, b2);
+            Button b3 = new Button("Admin");
+            VBox set1 = new VBox(label1, b1, b2, b3);
             
             set1.setSpacing(10);
             pane1.getChildren().add(set1);
@@ -79,22 +79,73 @@ public class Kayttis extends Application{
             pane3.getChildren().add(set5);
             pane3.setPadding(new Insets(70, 0, 0, 170));
             
+            //admin-kirjautumissivu
+            
+            FlowPane pane4 = new FlowPane();
+            Label label6 = new Label("Syötä admin-salasana:");
+            TextField field5 = new TextField();
+            Button b8 = new Button("Kirjaudu");
+            Button b9 = new Button("Takaisin");
+            VBox set6 = new VBox(label6, field5, b8, b9);
+            set6.setSpacing(7);
+            pane4.getChildren().add(set6);
+            pane4.setPadding(new Insets(70, 0, 0, 170));
+            
+            //admin-sivu
+            FlowPane pane5 = new FlowPane();
             
             b1.setOnAction((event) -> {
+                //siirtyminen vanhan käyttäjän kirjautumiseen
                 layout.setCenter(pane2);
             });
             
+            b2.setOnAction((event) -> {
+                //siirtyminen uuden käyttäjän luontiin
+                layout.setCenter(pane3);
+            });
+            
+            b3.setOnAction((event) -> {
+                //siirtyminen admin-kirjautumiseen
+               layout.setCenter(pane4); 
+            });
+            
+            b4.setOnAction((event) -> {
+               //kirjautuminen 
+               
+            });
+            
             b5.setOnAction((event) ->  {
+                //paluunappi
                 layout.setCenter(pane1);
             });
             
+            b6.setOnAction((event) -> {
+                //uuden käyttäjän lisääminen
+                Kayttaja uusikayttaja = new Kayttaja(field3.getText(), field4.getText());
+                if (!kayttajat.loytyykoKayttaja(uusikayttaja)) {
+                    kayttajat.lisaaKayttaja(uusikayttaja);
+                }
+                
+            });
+            
             b7.setOnAction((event) -> {
+                //paluunappi
                layout.setCenter(pane1); 
             });
             
-            b2.setOnAction((event) -> {
-               layout.setCenter(pane3);
+            b8.setOnAction((event) -> {
+               //admin-kirjautminen
+               if (field5.getText().equals("admin")) {
+                   layout.setCenter(pane5);
+               }
             });
+            
+            b9.setOnAction((event) -> {
+                //paluunappi
+               layout.setCenter(pane1);
+            });
+            
+            
             
         }
         

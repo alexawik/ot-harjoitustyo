@@ -15,4 +15,8 @@ public class Kayttajat {
         kayttajat.add(kayttaja);
     }
     
+    public Boolean loytyykoKayttaja(Kayttaja kayttaja) {
+        return kayttajat.contains(kayttaja);
+    }
+    
 }
