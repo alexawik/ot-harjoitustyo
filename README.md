@@ -10,6 +10,8 @@ Kirjautuneet käyttäjät voivat tehdä musiikin teoriaan liittyviä tehtäviä 
 
 [Työkirjanpito](https://github.com/alexawik/ot-harjoitustyo/blob/master/dokumentointi/ty%C3%B6kirjanpito.md)
 
+[Käyttöohje](https://github.com/alexawik/ot-harjoitustyo/blob/master/dokumentointi/k%C3%A4ytt%C3%B6ohje.md)
+
 ## Komentorivikomennot
 
 ### Käynnistys
