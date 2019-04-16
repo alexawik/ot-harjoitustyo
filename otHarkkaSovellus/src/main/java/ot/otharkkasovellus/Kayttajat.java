@@ -51,4 +51,25 @@ public class Kayttajat {
     public List<Kayttaja> getKayttajat() {
         return kayttajat;
     }
+    
+    public List<String> getKayttajanimet() {
+        List<String> nimet = new ArrayList();
+            for (int i=0;i<kayttajat.size();i++) {
+                nimet.add(kayttajat.get(i).getNimi());
+            }
+        return nimet;
+    }
+    
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (String s : getKayttajanimet()) {
+            sb.append(s);
+            sb.append("\n");
+        }
+        
+        String kayttajalista = sb.toString();
+        
+        return kayttajalista;
+    }
 }

@@ -29,6 +29,6 @@ public class Kayttaja extends Kirjautuja {
  
     @Override
     public String toString() {
-        return super.getKayttajatunnus() + "\t" + this.pistemaara;
+        return super.getKayttajatunnus();
     }
 }

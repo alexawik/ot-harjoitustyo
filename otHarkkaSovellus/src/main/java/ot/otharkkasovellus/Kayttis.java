@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 
@@ -96,6 +97,9 @@ public class Kayttis extends Application{
             
             //admin-sivu
             FlowPane pane5 = new FlowPane();
+            Text text1 = new Text(kayttajat.toString());
+            VBox set7 = new VBox(text1);
+            pane5.getChildren().add(set7);
             
             b1.setOnAction((event) -> {
                 //siirtyminen vanhan käyttäjän kirjautumiseen
@@ -143,7 +147,7 @@ public class Kayttis extends Application{
             b8.setOnAction((event) -> {
                //admin-kirjautminen
                if (field5.getText().equals("admin")) {
-                   layout.setCenter(pane5);
+                   layout.setCenter(pane5);                   
                }
             });
             
