@@ -1,6 +1,6 @@
 # Tehtäväsovellus
 
-Kirjautuneet käyttäjät voivat tehdä musiikin teoriaan liittyviä tehtäviä joista saavat pisteitä.
+Kirjautuneet käyttäjät voivat tehdä musiikin teoriaan liittyviä tehtäviä joista saavat pisteitä. Admin-salasanalla kirjautuva voi nähdä luettelon kirjautuneista käyttäjistä ja heidän pistemääristään.
 
 ## Dokumentaatio
 
@@ -12,8 +12,25 @@ Kirjautuneet käyttäjät voivat tehdä musiikin teoriaan liittyviä tehtäviä 
 
 ## Komentorivikomennot
 
+### Käynnistys
+
 Käynnistäminen projektikansiosta komennolla
 
 ```
 mvn compile exec:java -Dexec.mainClass=ot.otharkkasovellus.Kayttis
 ```
+
+### Testaus
+Testikattavuusraportti komennolla
+
+```
+mvn jacoco:report
+```
+
+### Checkstyle
+
+[checkstyle.xml](https://github.com/alexawik/ot-harjoitustyo/blob/master/otHarkkaSovellus/checkstyle.xml)-tiedoston määrittelemät testit suoritetaan komennolla
+
+```
+mvn jxr:jxr checkstyle:checkstyle
+``` 
