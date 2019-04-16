@@ -11,3 +11,7 @@
 | 8.4. | 1h | Checkstylen käyttöönotto, pom:n päivitys, debugaus |
 | 9.4. | 2,5h | Checkstyle-korjauksia, käyttöliittymän toteutusta |
 | 15.4. | 1h | Käyttiksen laajennusta |
+| 16.4. | 1h | Testien korjaamista, Dokumentaation päivitystä |
+|   | 2h | Käyttäjät-luokan laajentamista |
+|   | 2h | Käyttiksen muokkausta | 
+| Yht. | 19h |
