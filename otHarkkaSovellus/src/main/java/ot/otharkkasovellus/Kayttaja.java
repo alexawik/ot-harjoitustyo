@@ -7,8 +7,7 @@ public class Kayttaja extends Kirjautuja {
     
     public Kayttaja(String kayttajatunnus, String salasana) {
         super(kayttajatunnus, salasana);
-        this.pistemaara = 0;
-        
+        this.pistemaara = 0;        
     }
     
     public void lisaaPisteita(int maara) {
@@ -27,5 +26,9 @@ public class Kayttaja extends Kirjautuja {
     public String getSalasana() {
         return super.getSalasana();
     }
-    
+ 
+    @Override
+    public String toString() {
+        return super.getKayttajatunnus() + "\t" + this.pistemaara;
+    }
 }

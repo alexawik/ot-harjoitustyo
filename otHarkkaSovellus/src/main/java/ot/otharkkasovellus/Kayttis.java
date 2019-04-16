@@ -1,6 +1,8 @@
 
 package ot.otharkkasovellus;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -13,8 +15,9 @@ import javafx.stage.Stage;
 public class Kayttis extends Application{
     
     @Override
-        public void start(Stage primaryStage) {
-            Kayttajat kayttajat = new Kayttajat(); //toistaiseksi ohjelma luo uuden listan ohjelman käynnistyessä
+        public void start(Stage primaryStage) throws Exception {
+            String kayttiedosto = "kayttajat.txt";
+            Kayttajat kayttajat = new Kayttajat(kayttiedosto);
             // etusivu
             BorderPane layout = new BorderPane();
             FlowPane pane1 = new FlowPane();
@@ -122,8 +125,12 @@ public class Kayttis extends Application{
             b6.setOnAction((event) -> {
                 //uuden käyttäjän lisääminen
                 Kayttaja uusikayttaja = new Kayttaja(field3.getText(), field4.getText());
-                if (!kayttajat.loytyykoKayttaja(uusikayttaja)) {
-                    kayttajat.lisaaKayttaja(uusikayttaja);
+                if (kayttajat.loytyykoKayttaja(uusikayttaja) == null) {
+                    try {
+                        kayttajat.lisaaKayttaja(uusikayttaja);
+                    } catch (Exception ex) {
+                        Logger.getLogger(Kayttis.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
                 
             });
