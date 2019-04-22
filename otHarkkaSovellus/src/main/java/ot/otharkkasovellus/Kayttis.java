@@ -128,7 +128,7 @@ public class Kayttis extends Application{
             
             b6.setOnAction((event) -> {
                 //uuden käyttäjän lisääminen
-                Kayttaja uusikayttaja = new Kayttaja(field3.getText(), field4.getText());
+                Kayttaja uusikayttaja = new Kayttaja(field3.getText(), field4.getText(), 0);
                 if (kayttajat.loytyykoKayttaja(uusikayttaja) == null) {
                     try {
                         kayttajat.lisaaKayttaja(uusikayttaja);
