@@ -13,5 +13,7 @@
 | 15.4. | 1h | Käyttiksen laajennusta |
 | 16.4. | 1h | Testien korjaamista, Dokumentaation päivitystä |
 |   | 2h | Käyttäjät-luokan laajentamista |
-|   | 2h | Käyttiksen muokkausta | 
+|   | 2h | Käyttiksen muokkausta |
+| 22.4. | 1h | jarin generoinnin lisäys, checkstyle-korjauksia, 
+javadocien lisääminen | 
 | Yht. | 19h |

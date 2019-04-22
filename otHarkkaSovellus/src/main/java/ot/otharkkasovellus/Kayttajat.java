@@ -54,9 +54,9 @@ public class Kayttajat {
     
     public List<String> getKayttajanimet() {
         List<String> nimet = new ArrayList();
-            for (int i=0;i<kayttajat.size();i++) {
-                nimet.add(kayttajat.get(i).getNimi());
-            }
+        for (int i = 0; i < kayttajat.size(); i++) {
+            nimet.add(kayttajat.get(i).getNimi());
+        }
         return nimet;
     }
     
