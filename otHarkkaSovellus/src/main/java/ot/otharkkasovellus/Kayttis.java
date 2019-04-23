@@ -13,6 +13,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import ot.domain.Kayttaja;
 import ot.operations.Kayttajat;
+import ot.operations.Savellajit;
 
 
 public class Kayttis extends Application{
@@ -20,7 +21,10 @@ public class Kayttis extends Application{
     @Override
         public void start(Stage primaryStage) throws Exception {
             String kayttiedosto = "kayttajat.txt";
+            String saveltiedosto = "savellajit.txt";
             Kayttajat kayttajat = new Kayttajat(kayttiedosto);
+            Savellajit savellajit = new Savellajit(saveltiedosto);
+            
             // etusivu
             BorderPane layout = new BorderPane();
             FlowPane pane1 = new FlowPane();
@@ -99,9 +103,34 @@ public class Kayttis extends Application{
             
             //admin-sivu
             FlowPane pane5 = new FlowPane();
+            Button b13 = new Button("Takaisin");
+            //b13.setPadding(new Insets(5, 0, 0, 170));
             Text text1 = new Text(kayttajat.toString());
-            VBox set7 = new VBox(text1);
+            VBox set7 = new VBox(text1, b13);
+            set7.setPadding(new Insets(10, 2, 2, 20));
             pane5.getChildren().add(set7);
+            
+            //käyttäjä-sivu
+            FlowPane pane6 = new FlowPane();
+            Text text2 = new Text();
+            Text text3 = new Text();
+            Button b10 = new Button("Harjoitukseen");
+            Button b11 = new Button("Takaisin");
+            VBox set8 = new VBox(text2, text3, b11);
+            VBox set9 = new VBox(b10);
+            set8.setSpacing(5);
+            set9.setPadding(new Insets(120, 0, 0, 100));
+            pane6.getChildren().addAll(set8, set9);
+            
+            //tehtävä-sivu
+            FlowPane pane7 = new FlowPane();
+            Button b12 = new Button("Takaisin");
+            Text text4 = new Text("Montako etumerkkiä on annetussa sävellajissa?");
+            VBox set10 = new VBox(text4);
+            VBox set11 = new VBox(b12);
+            set11.setSpacing(5);
+            set10.setPadding(new Insets(100, 0, 0, 100));
+            pane7.getChildren().addAll(set11, set10);
             
             b1.setOnAction((event) -> {
                 //siirtyminen vanhan käyttäjän kirjautumiseen
@@ -115,23 +144,32 @@ public class Kayttis extends Application{
             
             b3.setOnAction((event) -> {
                 //siirtyminen admin-kirjautumiseen
-               layout.setCenter(pane4); 
+                layout.setCenter(pane4); 
             });
             
             b4.setOnAction((event) -> {
-               //kirjautuminen 
-               
+                //käyttäjän kirjautuminen
+                Kayttaja kayttajako = new Kayttaja(field1.getText(), field2.getText(), 0);
+                if (kayttajat.loytyykoKayttaja(kayttajako)) {
+                    kayttajat.setKirjautuja(kayttajat.etsiKayttaja(kayttajako));
+                    layout.setCenter(pane6);
+                    text2.setText("Kirjautuneena: " + kayttajat.getKirjautuja().getNimi());
+                    text3.setText("Pisteitä: " + kayttajat.getKirjautuja().getPistemaara());
+                }           
             });
-            
+                       
             b5.setOnAction((event) ->  {
-                //paluunappi
+                //paluunappi kirjautumisesta
                 layout.setCenter(pane1);
+                field1.clear();
+                field2.clear();
+                
             });
             
             b6.setOnAction((event) -> {
                 //uuden käyttäjän lisääminen
                 Kayttaja uusikayttaja = new Kayttaja(field3.getText(), field4.getText(), 0);
-                if (kayttajat.loytyykoKayttaja(uusikayttaja) == null) {
+                if (!kayttajat.loytyykoKayttaja(uusikayttaja)) {
                     try {
                         kayttajat.lisaaKayttaja(uusikayttaja);
                     } catch (Exception ex) {
@@ -142,8 +180,10 @@ public class Kayttis extends Application{
             });
             
             b7.setOnAction((event) -> {
-                //paluunappi
+                //paluunappi käyttäjän luonnista
                layout.setCenter(pane1); 
+               field3.clear();
+               field4.clear();
             });
             
             b8.setOnAction((event) -> {
@@ -154,12 +194,30 @@ public class Kayttis extends Application{
             });
             
             b9.setOnAction((event) -> {
-                //paluunappi
+                //paluunappi admin-kirjautumisesta
                layout.setCenter(pane1);
+               field5.clear();
             });
             
+            b10.setOnAction((event) -> {
+               //siirtyminen harjoitukseen
+               layout.setCenter(pane7);
+            });
             
+            b11.setOnAction((event) -> {
+               //paluunappi käyttäjän sivulta
+               layout.setCenter(pane2);
+            });
             
+            b12.setOnAction((event) -> {
+               //paluunappi harjoituksesta
+               layout.setCenter(pane6);
+            });
+            
+            b13.setOnAction((event) -> {
+               //paluunappi admin-näkymästä
+               layout.setCenter(pane4);
+            });
         }
         
         public static void main(String[] args) {

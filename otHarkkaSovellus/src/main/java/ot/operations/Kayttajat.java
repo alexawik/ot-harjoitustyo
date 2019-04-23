@@ -15,6 +15,7 @@ import ot.domain.Kayttaja;
 public class Kayttajat {
     private List<Kayttaja> kayttajat;
     private String file;
+    private Kayttaja kirjautuja;
     
     public Kayttajat(String file) throws Exception {
         this.kayttajat = new ArrayList<>();
@@ -40,7 +41,7 @@ public class Kayttajat {
     private void save() throws Exception {
         try (FileWriter writer = new FileWriter(new File(file))) {
             for (Kayttaja kayttaja : kayttajat) {
-                writer.write(kayttaja.getNimi() + "\t" + kayttaja.getSalasana() + kayttaja.getPistemaara() + "\n");
+                writer.write(kayttaja.getNimi() + "\t" + kayttaja.getSalasana() + "\t" + kayttaja.getPistemaara() + "\n");
             }
         }
     }
@@ -62,9 +63,32 @@ public class Kayttajat {
      * 
      * @param kayttaja etsitty käyttäjä
      * 
-     * @return käyttäjä jos löytyy, muuten null
+     * @return true jos löytyy, muuten false
      */
-    public Kayttaja loytyykoKayttaja(Kayttaja kayttaja) {
+    public boolean loytyykoKayttaja(Kayttaja kayttaja) {
+        int k = 0;
+        boolean loytyyko = false;
+        for (int i = 0; i < kayttajat.size(); i++) {
+            if (kayttajat.get(i).getNimi().equals(kayttaja.getNimi())) {
+                k++;
+            } 
+        }
+        
+        if (k != 0) {
+            loytyyko = true;
+        }
+        
+        return loytyyko;
+    }
+    
+    /**
+     * Etsii ja palauttaa parametrina annetun käyttäjän
+     * 
+     * @param kayttaja
+     * 
+     * @return Käyttäjälistasta löytyvä Kayttaja-olio
+     */
+    public Kayttaja etsiKayttaja(Kayttaja kayttaja) {
         return kayttajat.stream()
                 .filter(k->k.getNimi()
                 .equals(kayttaja.getNimi()))
@@ -92,6 +116,24 @@ public class Kayttajat {
             nimet.add(kayttajat.get(i).getNimi());
         }
         return nimet;
+    }
+    
+    /**
+     * Asettaa konstruktorissa annetun käyttäjän ohjelman kirjautujaksi
+     * 
+     * @param kayttaja 
+     */
+    public void setKirjautuja(Kayttaja kayttaja) {
+        this.kirjautuja = kayttaja;
+    }
+    
+    /**
+     * Hakee käyttäjän joka on kirjautuneena ohjelmaan
+     * 
+     * @return kayttaja-olio 
+     */
+    public Kayttaja getKirjautuja() {
+        return this.kirjautuja;
     }
     
     @Override

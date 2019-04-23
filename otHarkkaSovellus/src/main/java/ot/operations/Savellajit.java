@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 import ot.domain.Savellaji;
 
@@ -26,5 +27,21 @@ public class Savellajit {
             FileWriter writer = new FileWriter(new File(file));
             writer.close();
         }
+    }
+    
+    public Savellaji getSavellaji(int i) {
+        return savellajit.get(i);
+    }
+    
+    /**
+     * Hakee sävellaji-listasta satunnaisen sävellajin
+     * 
+     * @return Savellaji-olio
+     */
+    public Savellaji satunnainenSavellaji() {
+        Random rndm = new Random();
+        int r = rndm.nextInt(savellajit.size());
+        
+        return savellajit.get(r);
     }
 }
