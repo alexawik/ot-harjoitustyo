@@ -1,6 +1,6 @@
 # Tehtäväsovellus
 
-Kirjautuneet käyttäjät voivat tehdä musiikin teoriaan liittyviä tehtäviä joista saavat pisteitä. Admin-salasanalla kirjautuva voi nähdä luettelon kirjautuneista käyttäjistä ja heidän pistemääristään.
+Kirjautuneet käyttäjät vastaavat kysymyksiin sävellajien etumerkeistä ja saavat tästä pisteitä. Admin-salasanalla kirjautuva voi nähdä luettelon kirjautuneista käyttäjistä ja heidän pistemääristään.
 
 ## Dokumentaatio
 
@@ -36,3 +36,9 @@ mvn jacoco:report
 ```
 mvn jxr:jxr checkstyle:checkstyle
 ``` 
+
+### Javadoc
+
+```
+mvn javadoc:javadoc
+```
