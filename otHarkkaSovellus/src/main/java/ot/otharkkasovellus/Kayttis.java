@@ -12,7 +12,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import ot.domain.Kayttaja;
-import ot.domain.Kayttajat;
+import ot.operations.Kayttajat;
 
 
 public class Kayttis extends Application{

@@ -1,5 +1,5 @@
 
-package ot.domain;
+package ot.operations;
 
 import ot.domain.Kayttaja;
 import java.io.File;
@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import ot.domain.Kayttaja;
 
 /**
  * Hallinnoi sovelluksen käyttäjiä

@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 import org.junit.Rule;
 import org.junit.rules.TemporaryFolder;
 import ot.domain.Kayttaja;
-import ot.domain.Kayttajat;
+import ot.operations.Kayttajat;
 
 public class KayttajatTest {
     @Rule
