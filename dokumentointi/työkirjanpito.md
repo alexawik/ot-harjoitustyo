@@ -15,7 +15,7 @@
 |   | 2h | Käyttäjät-luokan laajentamista |
 |   | 2h | Käyttiksen muokkausta |
 | 22.4. | 1h | jarin generoinnin lisäys, checkstyle-korjauksia, 
-javadocien lisääminen | 
+| | |javadocien lisääminen | 
 | 23.4. | 2h | Rakenteen uudistaminen |
 |   | 6h | Luokkien lisääminen, käyttöliittymän edistäminen |
 | Yht. | 28h |
