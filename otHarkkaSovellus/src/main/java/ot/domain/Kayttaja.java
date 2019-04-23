@@ -1,4 +1,4 @@
-package ot.otharkkasovellus;
+package ot.domain;
 
 
 public class Kayttaja extends Kirjautuja {

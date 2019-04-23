@@ -11,6 +11,8 @@ import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import ot.domain.Kayttaja;
+import ot.domain.Kayttajat;
 
 
 public class Kayttis extends Application{

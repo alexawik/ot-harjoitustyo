@@ -11,8 +11,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Rule;
 import org.junit.rules.TemporaryFolder;
-import ot.otharkkasovellus.Kayttaja;
-import ot.otharkkasovellus.Kayttajat;
+import ot.domain.Kayttaja;
+import ot.domain.Kayttajat;
 
 public class KayttajatTest {
     @Rule

@@ -1,4 +1,4 @@
-package ot.otharkkasovellus;
+package ot.domain;
 
 
 import java.util.HashMap;

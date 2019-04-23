@@ -1,4 +1,6 @@
-package ot.otharkkasovellus;
+package ot.domain;
+
+import ot.domain.Kayttaja;
 
 
 public class TehtavanSuoritus {

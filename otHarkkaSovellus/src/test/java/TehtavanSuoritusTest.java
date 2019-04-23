@@ -6,9 +6,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import ot.otharkkasovellus.Kayttaja;
-import ot.otharkkasovellus.Tehtava;
-import ot.otharkkasovellus.TehtavanSuoritus;
+import ot.domain.Kayttaja;
+import ot.domain.Tehtava;
+import ot.domain.TehtavanSuoritus;
 
 public class TehtavanSuoritusTest {
     

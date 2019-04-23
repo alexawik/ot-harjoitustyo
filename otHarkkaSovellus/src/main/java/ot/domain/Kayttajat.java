@@ -1,6 +1,7 @@
 
-package ot.otharkkasovellus;
+package ot.domain;
 
+import ot.domain.Kayttaja;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
