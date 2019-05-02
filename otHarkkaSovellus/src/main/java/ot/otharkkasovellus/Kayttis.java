@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import ot.domain.Kayttaja;
 import ot.operations.Kayttajat;
 import ot.operations.Savellajit;
+import ot.operations.TehtavanSuoritus;
 
 
 public class Kayttis extends Application{
@@ -24,6 +25,8 @@ public class Kayttis extends Application{
             String saveltiedosto = "savellajit.txt";
             Kayttajat kayttajat = new Kayttajat(kayttiedosto);
             Savellajit savellajit = new Savellajit(saveltiedosto);
+            TehtavanSuoritus suoritus = new TehtavanSuoritus();
+            suoritus.setSuoritettava(savellajit);
             
             // etusivu
             BorderPane layout = new BorderPane();
@@ -104,10 +107,10 @@ public class Kayttis extends Application{
             //admin-sivu
             FlowPane pane5 = new FlowPane();
             Button b13 = new Button("Takaisin");
-            //b13.setPadding(new Insets(5, 0, 0, 170));
             Text text1 = new Text(kayttajat.toString());
             VBox set7 = new VBox(text1, b13);
             set7.setPadding(new Insets(10, 2, 2, 20));
+            pane5.setPadding(new Insets(2, 2, 2, 2));
             pane5.getChildren().add(set7);
             
             //käyttäjä-sivu
@@ -119,17 +122,25 @@ public class Kayttis extends Application{
             VBox set8 = new VBox(text2, text3, b11);
             VBox set9 = new VBox(b10);
             set8.setSpacing(5);
-            set9.setPadding(new Insets(120, 0, 0, 100));
+            set9.setPadding(new Insets(120, 0, 0, 90));
+            pane6.setPadding(new Insets(2, 2, 2, 2));
             pane6.getChildren().addAll(set8, set9);
             
             //tehtävä-sivu
             FlowPane pane7 = new FlowPane();
             Button b12 = new Button("Takaisin");
             Text text4 = new Text("Montako etumerkkiä on annetussa sävellajissa?");
-            VBox set10 = new VBox(text4);
+            Text text5 = new Text(suoritus.getSuoritettava().getNimi());
+            TextField field6 = new TextField();            
+            Button b14 = new Button("Vastaa");
+            HBox hbox6 = new HBox(text5, field6, b14);
+            hbox6.setSpacing(5);
+            VBox set10 = new VBox(text4, hbox6);
+            set10.setSpacing(10);
             VBox set11 = new VBox(b12);
-            set11.setSpacing(5);
-            set10.setPadding(new Insets(100, 0, 0, 100));
+            set11.setSpacing(10);
+            set10.setPadding(new Insets(100, 0, 0, 60));
+            pane7.setPadding(new Insets(2, 2, 2, 2));
             pane7.getChildren().addAll(set11, set10);
             
             b1.setOnAction((event) -> {
@@ -176,7 +187,7 @@ public class Kayttis extends Application{
                         Logger.getLogger(Kayttis.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
-                
+                layout.setCenter(pane2);
             });
             
             b7.setOnAction((event) -> {
@@ -202,6 +213,8 @@ public class Kayttis extends Application{
             b10.setOnAction((event) -> {
                //siirtyminen harjoitukseen
                layout.setCenter(pane7);
+               text5.setText(suoritus.getSuoritettava().getNimi());
+               
             });
             
             b11.setOnAction((event) -> {
@@ -212,11 +225,21 @@ public class Kayttis extends Application{
             b12.setOnAction((event) -> {
                //paluunappi harjoituksesta
                layout.setCenter(pane6);
+               field6.clear();
+               text3.setText("" + kayttajat.getKirjautuja().getPistemaara());
             });
             
             b13.setOnAction((event) -> {
                //paluunappi admin-näkymästä
                layout.setCenter(pane4);
+            });
+            
+            b14.setOnAction((event) -> {
+                //tehtävään vastaaminen
+                if (suoritus.tehtavaOikein(field6.getText())) {
+                    kayttajat.getKirjautuja().lisaaPisteita(1);
+                    suoritus.setSuoritettava(savellajit);
+                }
             });
         }
         
