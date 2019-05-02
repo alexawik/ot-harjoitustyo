@@ -48,4 +48,5 @@ mvn javadoc:javadoc
 ```
 mvn package
 ```
-Luo jar-tiedoston otHarkkaSovellus-1.0-SNAPSHOT.jar target-hakemistoon
+Luo jar-tiedoston _otHarkkaSovellus-1.0-SNAPSHOT.jar_ hakemistoon 
+_target_.

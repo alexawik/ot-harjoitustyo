@@ -83,7 +83,7 @@ public class Kayttajat {
     /**
      * Etsii ja palauttaa parametrina annetun käyttäjän
      * 
-     * @param kayttaja
+     * @param kayttaja etsitty käyttäjä
      * 
      * @return Käyttäjälistasta löytyvä Kayttaja-olio
      */
@@ -105,11 +105,11 @@ public class Kayttajat {
     }
     
     /**
-     * Listaa käyttäjien nimet
+     * Listaa käyttäjien nimet ja pistemäärät
      * 
-     * @return lista käyttäjänimistä 
+     * @return lista käyttäjistä pisteineen 
      */
-    public List<String> getKayttajanimet() {
+    public List<String> getKayttajatJaPisteet() {
         List<String> nimet = new ArrayList();
         for (int i = 0; i < kayttajat.size(); i++) {
             nimet.add(kayttajat.get(i).getNimi() + ":  " + kayttajat.get(i).getPistemaara());
@@ -138,7 +138,7 @@ public class Kayttajat {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        for (String s : getKayttajanimet()) {
+        for (String s : getKayttajatJaPisteet()) {
             sb.append(s);
             sb.append("\n");
         }

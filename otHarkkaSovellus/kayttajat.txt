@@ -1,4 +1,4 @@
 The Dude	abides	2
-Karri	koira	5
+Karri	koira	6
 Alex	123	4
 Tormund	Brienne	0

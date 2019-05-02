@@ -36,4 +36,59 @@ public class KayttajatTest {
         assertTrue("The Dude".equals(kayttaja.getNimi()));
         assertTrue("Abides".equals(kayttaja.getSalasana()));
     }
+    
+    @Test
+    public void kayttajaLoytyyBoolean() {
+        Kayttaja kayttaja = new Kayttaja("The Dude", "Abides", 0);
+        assertTrue(kayt.loytyykoKayttaja(kayttaja));
+    }
+    
+    @Test
+    public void kayttajaEiLoydyBoolean() {
+        Kayttaja kayttaja = new Kayttaja("Mikko", "kissakoira", 0);
+        assertFalse(kayt.loytyykoKayttaja(kayttaja));
+    }
+    
+    @Test
+    public void kayttajaLoytyyOlio() {
+        Kayttaja kayttaja = new Kayttaja("The Dude", "Abides", 0);
+        assertTrue(kayt.etsiKayttaja(kayttaja) != null);
+    }
+    
+    @Test
+    public void kayttajaEiLoydyOlio() {
+        Kayttaja kayttaja = new Kayttaja("Mikko", "kissakoira", 0);
+        assertTrue(kayt.etsiKayttaja(kayttaja) == null);
+    }
+    
+    @Test
+    public void kayttajaLisataan() throws Exception {
+        Kayttaja kayttaja = new Kayttaja("Mikko", "kissakoira", 0);
+        kayt.lisaaKayttaja(kayttaja);
+        assertTrue(kayt.loytyykoKayttaja(kayttaja));
+    }
+    
+    @Test
+    public void kirjautujaLoytyy() throws Exception {
+        Kayttaja kayttaja = new Kayttaja("Mikko", "kissakoira", 0);
+        kayt.lisaaKayttaja(kayttaja);
+        kayt.setKirjautuja(kayttaja);
+        assertTrue(kayt.getKirjautuja().equals(kayttaja));
+    }
+    
+    @Test
+    public void kayttajatPisteineenLoytyy() throws Exception {
+        Kayttaja kayttaja = new Kayttaja("Mikko", "kissakoira", 0);
+        kayt.lisaaKayttaja(kayttaja);
+        List kayttajatpisteineen = kayt.getKayttajatJaPisteet();
+        String toinenListalla = kayttajatpisteineen.get(1).toString();
+        assertTrue(toinenListalla.equals("Mikko:  0"));
+    }
+    
+    @Test
+    public void toStringTulostaaOikein() throws Exception {
+        Kayttaja kayttaja = new Kayttaja("Mikko", "kissakoira", 0);
+        kayt.lisaaKayttaja(kayttaja);
+        assertTrue(kayt.toString().equals("The Dude:  0\nMikko:  0\n"));
+    }
 }

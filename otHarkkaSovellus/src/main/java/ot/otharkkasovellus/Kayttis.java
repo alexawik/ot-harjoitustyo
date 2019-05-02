@@ -36,22 +36,26 @@ public class Kayttis extends Application {
     @Override
         public void start(Stage primaryStage) throws Exception {
             
-            
-            
             // etusivu
             BorderPane layout = new BorderPane();
             FlowPane pane1 = new FlowPane();
+            Label otsikko = new Label("Etumerkkiharjoittelua");
+            otsikko.setFont(new Font("Arial", 16));
+            otsikko.setPadding(new Insets(20, 5, 5, 20));
             Label label1= new Label("Kirjaudu");
             label1.setFont(new Font("Arial", 14));
             label1.setPadding(new Insets(2, 2, 8, 2));
             Button b1 = new Button("Käyttäjä");
             Button b2 = new Button("Uusi käyttäjä");
-            Button b3 = new Button("Admin");
+            Button b3 = new Button("Admin");           
             VBox set1 = new VBox(label1, b1, b2, b3);
+            set1.setPadding(new Insets(60, 0, 0, 20));
+            HBox etunakyma = new HBox(otsikko, set1);
+            etunakyma.setSpacing(10);
             
             set1.setSpacing(10);
-            pane1.getChildren().add(set1);
-            pane1.setPadding(new Insets(60, 0, 0, 210));
+            pane1.getChildren().addAll(etunakyma);
+            //pane1.setPadding(new Insets(60, 0, 0, 210));
             layout.setCenter(pane1);
             
             Scene scene1 = new Scene(layout, 500, 300);
@@ -116,9 +120,13 @@ public class Kayttis extends Application {
             
             //admin-sivu
             FlowPane pane5 = new FlowPane();
+            Label label7 = new Label("Käyttäjien pisteet");
+            label7.setFont(new Font("Arial", 14));
+            label7.setPadding(new Insets(2, 2, 8, 2));
             Button b13 = new Button("Takaisin");
             Text text1 = new Text(kayttajat.toString());
-            VBox set7 = new VBox(text1, b13);
+            VBox set7 = new VBox(label7, text1, b13);
+            set7.setSpacing(5);
             set7.setPadding(new Insets(10, 2, 2, 20));
             pane5.setPadding(new Insets(2, 2, 2, 2));
             pane5.getChildren().add(set7);
