@@ -145,9 +145,10 @@ public class Kayttis extends Application {
             Button b14 = new Button("Vastaa");
             Text text6 = new Text();
             Text text7 = new Text();
+            Text text8 = new Text();
             HBox hbox6 = new HBox(text5, field6, b14);
             hbox6.setSpacing(5);
-            VBox set10 = new VBox(text4, hbox6);
+            VBox set10 = new VBox(text4, hbox6, text8);
             set10.setSpacing(10);
             VBox set11 = new VBox(text6, text7, b12);
             set11.setSpacing(5);
@@ -250,12 +251,18 @@ public class Kayttis extends Application {
             });
             
             b14.setOnAction((event) -> {
-                //tehtävään vastaaminen
+                //tehtävään vastaaminen 
                 if (suoritus.tehtavaOikein(field6.getText())) {
                     kayttajat.getKirjautuja().lisaaPisteita(1);
                     suoritus.setSuoritettava(savellajit);
+                    text8.setText("Oikein!");
                     text7.setText("Pisteitä: " + kayttajat.getKirjautuja().getPistemaara());
+                    text5.setText(suoritus.getSuoritettava().getNimi());
+                } else {
+                    text8.setText("Yritä uudelleen.");
                 }
+                field6.clear();
+                field6.requestFocus();
             });
         }
         

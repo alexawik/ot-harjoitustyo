@@ -19,5 +19,6 @@
 | 23.4. | 2h | Rakenteen uudistaminen |
 |   | 6h | Luokkien lisääminen, käyttöliittymän edistäminen |
 | 2.5. | 2h | Tehtävämekaniikan lisäys |
-|   |   | Käyttöliittymän hionta |
-| Yht. | 30h |
+|   | 2h | Käyttöliittymän hionta |
+|   |   | Testikattavuuden laajentaminen |
+| Yht. | 32h |
