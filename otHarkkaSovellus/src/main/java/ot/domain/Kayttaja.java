@@ -7,7 +7,7 @@ public class Kayttaja extends Kirjautuja {
     
     public Kayttaja(String kayttajatunnus, String salasana, int pistemaara) {
         super(kayttajatunnus, salasana);
-        this.pistemaara = 0;        
+        this.pistemaara = pistemaara;        
     }
     
     /**

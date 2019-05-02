@@ -30,6 +30,13 @@ public class TehtavanSuoritus {
         return this.suoritettava;
     }
    
+    /**
+     * Kertoo, vastaako etumerkkien määrän oikeaa määrää.
+     * 
+     * @param vastaus käyttäjän antama vastaus
+     * 
+     * @return True jos vastaus oikein, muuten false.
+     */
     public Boolean tehtavaOikein(String vastaus) {
         Boolean oikein = false;
         int etumerkit = Integer.parseInt(vastaus);

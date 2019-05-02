@@ -1,12 +1,8 @@
 
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.List;
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Rule;
@@ -25,7 +21,7 @@ public class KayttajatTest {
         kayttiedosto = testikansio.newFile("kayttajat_testi.txt");
        
         try (FileWriter tiedosto = new FileWriter(kayttiedosto.getAbsolutePath())) {
-           tiedosto.write("The Dude\tAbides\n");
+           tiedosto.write("The Dude\tAbides\t0\n");
         }
        
         kayt = new Kayttajat(kayttiedosto.getAbsolutePath());

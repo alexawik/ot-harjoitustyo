@@ -42,3 +42,10 @@ mvn jxr:jxr checkstyle:checkstyle
 ```
 mvn javadoc:javadoc
 ```
+
+### Jarin generointi
+
+```
+mvn package
+```
+Luo jar-tiedoston otHarkkaSovellus-1.0-SNAPSHOT.jar

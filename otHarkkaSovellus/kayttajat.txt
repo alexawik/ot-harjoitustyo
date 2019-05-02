@@ -1,3 +1,4 @@
-The Dude	abides	0
-Karri	koira	0
-Alex	123	0
+The Dude	abides	2
+Karri	koira	5
+Alex	123	1
+Tormund	Brienne	0

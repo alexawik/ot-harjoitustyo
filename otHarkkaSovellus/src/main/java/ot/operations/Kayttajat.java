@@ -1,7 +1,6 @@
 
 package ot.operations;
 
-import ot.domain.Kayttaja;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
@@ -24,7 +23,7 @@ public class Kayttajat {
             Scanner lukija = new Scanner(new File(file));
             while (lukija.hasNextLine()) {
                 String[] tiedot = lukija.nextLine().split("\t");
-                Kayttaja kayttaja = new Kayttaja(tiedot[0], tiedot[1], 0);
+                Kayttaja kayttaja = new Kayttaja(tiedot[0], tiedot[1], Integer.parseInt(tiedot[2]));
                 kayttajat.add(kayttaja);
             }
         } catch (Exception e) {
@@ -38,7 +37,7 @@ public class Kayttajat {
      * 
      * @throws Exception 
      */
-    private void save() throws Exception {
+    public void save() throws Exception {
         try (FileWriter writer = new FileWriter(new File(file))) {
             for (Kayttaja kayttaja : kayttajat) {
                 writer.write(kayttaja.getNimi() + "\t" + kayttaja.getSalasana() + "\t" + kayttaja.getPistemaara() + "\n");
@@ -113,7 +112,7 @@ public class Kayttajat {
     public List<String> getKayttajanimet() {
         List<String> nimet = new ArrayList();
         for (int i = 0; i < kayttajat.size(); i++) {
-            nimet.add(kayttajat.get(i).getNimi());
+            nimet.add(kayttajat.get(i).getNimi() + ":  " + kayttajat.get(i).getPistemaara());
         }
         return nimet;
     }
@@ -148,4 +147,5 @@ public class Kayttajat {
         
         return kayttajalista;
     }
+    
 }

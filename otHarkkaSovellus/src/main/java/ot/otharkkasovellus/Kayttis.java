@@ -17,16 +17,26 @@ import ot.operations.Savellajit;
 import ot.operations.TehtavanSuoritus;
 
 
-public class Kayttis extends Application{
+public class Kayttis extends Application {
+    private final String kayttiedosto = "kayttajat.txt";
+    private final String saveltiedosto = "savellajit.txt";
+    private Kayttajat kayttajat;
+    private Savellajit savellajit;
+    private TehtavanSuoritus suoritus;
+            
+    @Override
+    public void init() throws Exception {
+        
+        kayttajat = new Kayttajat(kayttiedosto);
+        savellajit = new Savellajit(saveltiedosto);
+        suoritus = new TehtavanSuoritus();
+        suoritus.setSuoritettava(savellajit);
+    }
     
     @Override
         public void start(Stage primaryStage) throws Exception {
-            String kayttiedosto = "kayttajat.txt";
-            String saveltiedosto = "savellajit.txt";
-            Kayttajat kayttajat = new Kayttajat(kayttiedosto);
-            Savellajit savellajit = new Savellajit(saveltiedosto);
-            TehtavanSuoritus suoritus = new TehtavanSuoritus();
-            suoritus.setSuoritettava(savellajit);
+            
+            
             
             // etusivu
             BorderPane layout = new BorderPane();
@@ -133,12 +143,14 @@ public class Kayttis extends Application{
             Text text5 = new Text(suoritus.getSuoritettava().getNimi());
             TextField field6 = new TextField();            
             Button b14 = new Button("Vastaa");
+            Text text6 = new Text();
+            Text text7 = new Text();
             HBox hbox6 = new HBox(text5, field6, b14);
             hbox6.setSpacing(5);
             VBox set10 = new VBox(text4, hbox6);
             set10.setSpacing(10);
-            VBox set11 = new VBox(b12);
-            set11.setSpacing(10);
+            VBox set11 = new VBox(text6, text7, b12);
+            set11.setSpacing(5);
             set10.setPadding(new Insets(100, 0, 0, 60));
             pane7.setPadding(new Insets(2, 2, 2, 2));
             pane7.getChildren().addAll(set11, set10);
@@ -188,6 +200,7 @@ public class Kayttis extends Application{
                     }
                 }
                 layout.setCenter(pane2);
+                text1.setText(kayttajat.toString());
             });
             
             b7.setOnAction((event) -> {
@@ -199,9 +212,10 @@ public class Kayttis extends Application{
             
             b8.setOnAction((event) -> {
                //admin-kirjautminen
-               if (field5.getText().equals("admin")) {
-                   layout.setCenter(pane5);                   
-               }
+                if (field5.getText().equals("admin")) {
+                   layout.setCenter(pane5);
+                   text1.setText(kayttajat.toString());
+                }
             });
             
             b9.setOnAction((event) -> {
@@ -214,7 +228,8 @@ public class Kayttis extends Application{
                //siirtyminen harjoitukseen
                layout.setCenter(pane7);
                text5.setText(suoritus.getSuoritettava().getNimi());
-               
+               text6.setText(text2.getText());
+               text7.setText(text3.getText());
             });
             
             b11.setOnAction((event) -> {
@@ -226,7 +241,7 @@ public class Kayttis extends Application{
                //paluunappi harjoituksesta
                layout.setCenter(pane6);
                field6.clear();
-               text3.setText("" + kayttajat.getKirjautuja().getPistemaara());
+               text3.setText("Pisteitä: " + kayttajat.getKirjautuja().getPistemaara());
             });
             
             b13.setOnAction((event) -> {
@@ -239,6 +254,7 @@ public class Kayttis extends Application{
                 if (suoritus.tehtavaOikein(field6.getText())) {
                     kayttajat.getKirjautuja().lisaaPisteita(1);
                     suoritus.setSuoritettava(savellajit);
+                    text7.setText("Pisteitä: " + kayttajat.getKirjautuja().getPistemaara());
                 }
             });
         }
@@ -246,5 +262,10 @@ public class Kayttis extends Application{
         public static void main(String[] args) {
         launch(Kayttis.class);
         
-    } 
+    }
+        
+    @Override
+    public void stop() throws Exception {
+        kayttajat.save();
+    }   
 }
