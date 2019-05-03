@@ -24,4 +24,5 @@
 | 3.5. | 0,5h | Releasen luonti, testauksia, Javadocien tarkistusta |
 |  | 2h | Arkkitehtuurikuvauksen ja muun dokumentaation päivittäminen |
 |  | 2h | Testikattavuutta, debugausta |
-| Yht. | 38h |
+|  | 1h | Sekvenssikaavioiden luontia |
+| Yht. | 39h |
