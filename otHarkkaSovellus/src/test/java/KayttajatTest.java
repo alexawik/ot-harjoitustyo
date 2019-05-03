@@ -49,6 +49,11 @@ public class KayttajatTest {
         assertFalse(kayt.loytyykoKayttaja(kayttaja));
     }
     
+        @Test
+    public void kayttajaEiLoydyVaarallaSalasanalla() {
+        
+    }
+    
     @Test
     public void kayttajaLoytyyOlio() {
         Kayttaja kayttaja = new Kayttaja("The Dude", "Abides", 0);

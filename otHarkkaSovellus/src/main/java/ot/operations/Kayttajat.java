@@ -68,7 +68,9 @@ public class Kayttajat {
         int k = 0;
         boolean loytyyko = false;
         for (int i = 0; i < kayttajat.size(); i++) {
-            if (kayttajat.get(i).getNimi().equals(kayttaja.getNimi())) {
+            if (kayttajat.get(i).getNimi().equals(kayttaja.getNimi())
+                    && kayttajat.get(i).getSalasana().equals(kayttaja.getSalasana())) {
+                
                 k++;
             } 
         }
