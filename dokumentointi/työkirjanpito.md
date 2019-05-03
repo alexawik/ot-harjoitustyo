@@ -21,4 +21,6 @@
 | 2.5. | 2h | Tehtävämekaniikan lisäys |
 |   | 2,5h | Käyttöliittymän hionta |
 |   | 1h | Testikattavuuden laajentaminen |
-| Yht. | 33,5h |
+| 3.5. | 0,5h | Releasen luonti, testauksia, Javadocien tarkistusta |
+|  |  |  |
+| Yht. | 34h |
