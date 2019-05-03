@@ -1,3 +1,3 @@
-## Ohjelman alustava rakenne
+## Ohjelman rakenne
 
-<img src="https://yuml.me/87505ec0.jpg">
+<img src="https://yuml.me/1eacb2c9.jpg">
