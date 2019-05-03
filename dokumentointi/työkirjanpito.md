@@ -22,5 +22,5 @@
 |   | 2,5h | Käyttöliittymän hionta |
 |   | 1h | Testikattavuuden laajentaminen |
 | 3.5. | 0,5h | Releasen luonti, testauksia, Javadocien tarkistusta |
-|  | 1h | Arkkitehtuurikuvauksen päivittäminen |
-| Yht. | 35h |
+|  | 2h | Arkkitehtuurikuvauksen ja muun dokumentaation päivittäminen |
+| Yht. | 36h |
