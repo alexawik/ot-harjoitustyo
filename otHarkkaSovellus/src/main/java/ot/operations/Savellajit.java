@@ -29,6 +29,13 @@ public class Savellajit {
         }
     }
     
+    /**
+     * Hakee parametrin antamalla indeksillä sävellajin listasta.
+     * 
+     * @param i listan indeksi
+     * 
+     * @return ideksin mukainen sävellaji listasta 
+     */
     public Savellaji getSavellaji(int i) {
         return savellajit.get(i);
     }

@@ -13,17 +13,8 @@ public class Kirjautuja {
         return kayttajatunnus;
     }
 
-    public void setKayttajatunnus(String kayttajatunnus) {
-        this.kayttajatunnus = kayttajatunnus;
-    }
-
     public String getSalasana() {
         return salasana;
-    }
-
-    public void setSalasana(String salasana) {
-        this.salasana = salasana;
-    }
-    
+    } 
     
 }

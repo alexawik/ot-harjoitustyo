@@ -18,8 +18,4 @@ public class Savellaji {
         return etumerkkeja;
     }
     
-    @Override
-    public String toString() {
-        return nimi + ", " + etumerkkeja + " etumerkkiä";
-    }
 }

@@ -1,15 +1,12 @@
 
 package ot.operations;
 
-import ot.domain.Kayttaja;
+import java.util.regex.*;
 import ot.domain.Savellaji;
 
 public class TehtavanSuoritus {
     private Savellajit slajit;
     private Savellaji suoritettava;
-    
-    public TehtavanSuoritus() {
-    }
     
     /**
      * Asettaa tehtävään suoritettavan sävellajin
@@ -19,6 +16,17 @@ public class TehtavanSuoritus {
      */
     public void setSuoritettava(Savellajit slajit) {
         this.suoritettava = slajit.satunnainenSavellaji();
+    }
+    
+    /**
+     * Metodi suoritettavan sävellajin manuaaliseen asettamiseen.
+     * Avustaa testeissä.
+     * 
+     * @param slajit sävellaji-lista
+     * @param indeksi listan indeksi josta sävellaji halutaan hakea
+     */
+    public void setSuoritettavaManuaalisesti(Savellajit slajit, int indeksi) {
+        this.suoritettava = slajit.getSavellaji(indeksi);
     }
     
     /**
@@ -39,10 +47,12 @@ public class TehtavanSuoritus {
      */
     public Boolean tehtavaOikein(String vastaus) {
         Boolean oikein = false;
-        int etumerkit = Integer.parseInt(vastaus);
-        if (suoritettava.getEtumerkkeja() == etumerkit) {
-            oikein = true;
-        }
+        if (Pattern.matches("[0-9]", vastaus)) {
+            int etumerkit = Integer.parseInt(vastaus);
+            if (suoritettava.getEtumerkkeja() == etumerkit) {
+                oikein = true;
+            }
+        }   
         
         return oikein;
     }

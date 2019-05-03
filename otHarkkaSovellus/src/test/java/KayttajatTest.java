@@ -91,4 +91,12 @@ public class KayttajatTest {
         kayt.lisaaKayttaja(kayttaja);
         assertTrue(kayt.toString().equals("The Dude:  0\nMikko:  0\n"));
     }
+    
+    @Test
+    public void pisteitaLisataan() {
+        Kayttaja kayttaja = new Kayttaja("Mikko", "kissakoira", 0);
+        kayt.setKirjautuja(kayttaja);
+        kayt.getKirjautuja().lisaaPisteita(1);
+        assertTrue(kayt.getKirjautuja().getPistemaara() == 1);
+    }
 }

@@ -23,4 +23,5 @@
 |   | 1h | Testikattavuuden laajentaminen |
 | 3.5. | 0,5h | Releasen luonti, testauksia, Javadocien tarkistusta |
 |  | 2h | Arkkitehtuurikuvauksen ja muun dokumentaation päivittäminen |
-| Yht. | 36h |
+|  | 2h | Testikattavuutta, debugausta |
+| Yht. | 38h |

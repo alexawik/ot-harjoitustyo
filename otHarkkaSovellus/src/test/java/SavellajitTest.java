@@ -1,10 +1,5 @@
 
-import java.io.File;
-import java.util.List;
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import ot.domain.Savellaji;
@@ -26,7 +21,7 @@ public class SavellajitTest {
     @Test
     public void palauttaaSatunnaisenSavellajin() {
         Savellaji satunnainen = savellajit.satunnainenSavellaji();
-        assertTrue(satunnainen.getEtumerkkeja()<8);
+        assertTrue(satunnainen.getEtumerkkeja() < 8);
     }
 
 }

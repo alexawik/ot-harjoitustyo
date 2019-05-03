@@ -46,9 +46,5 @@ public class Kayttaja extends Kirjautuja {
     public String getSalasana() {
         return super.getSalasana();
     }
- 
-    @Override
-    public String toString() {
-        return super.getKayttajatunnus();
-    }
+
 }
