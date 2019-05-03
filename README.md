@@ -12,6 +12,10 @@ Kirjautuneet käyttäjät vastaavat kysymyksiin sävellajien etumerkeistä ja sa
 
 [Käyttöohje](https://github.com/alexawik/ot-harjoitustyo/blob/master/dokumentointi/k%C3%A4ytt%C3%B6ohje.md)
 
+## Releaset
+
+[Viikko 6](https://github.com/alexawik/ot-harjoitustyo/releases/tag/viikko6)
+
 ## Komentorivikomennot
 
 ### Käynnistys
