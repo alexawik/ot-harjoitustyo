@@ -13,7 +13,7 @@ Ohjelman luokkien väliset suhteet ja attribuutit:
 
 ### Toiminnallisuus
 
-Esimerkkejä koodin toiminnasta:
+Keskeisimmät toiminnallisuudet:
 
 Käyttäjän kirjautuessa luodaan tilapäisesti uusi Kayttaja-olio, jota verrataan Kayttajat-listan olioihin.
 
@@ -23,3 +23,11 @@ Käyttäjän kirjautuessa luodaan tilapäisesti uusi Kayttaja-olio, jota verrata
 Kun käyttäjä vastaa kysymykseen, vastausta verrataan ratkaisuun, ja oikeasta vastauksesta annetaan yksi piste.
 
 <img src="https://github.com/alexawik/ot-harjoitustyo/blob/master/dokumentointi/images/vastaussekvenssi.png">
+
+### Tiedostot
+
+Ohjelma lukee tarvitsemansa sävellajit tekstitiedostosta jota ei voi ohjelmasta käsin muokata (tämä ei olisi suotavaakaan). Käyttäjien tiedot luetaan myös tekstitiedostosta, johon tiedot myös tallennetaan kun uusia käyttäjiä lisätään, sekä ohjelman sulkeutuessa, pisteiden tallentamiseksi.
+
+### Rakenteen heikkoudet
+
+Käyttöliittymässä jonkin verran toiminnallisuutta jonka voisi refaktoroida ulkopuolelle. Tällaisenaan sovelluksen käyttötarkoituksia ei voi suuresti laajentaa ilman rakenteellisia muutoksia. Olisi myös mielekkäämpää jos sävellajit luettaisiin db- eikä txt-tiedostosta.
