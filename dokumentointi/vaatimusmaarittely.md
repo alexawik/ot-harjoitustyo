@@ -15,4 +15,4 @@ Käyttöliittymään:
 Toimintaan:
 - Ohjelman laajentaminen tehtäviin, joissa sävellajin etumerkit täytyy myös nimetä
 - Osio, jossa etumerkkimuistisääntö-loruja voi kerrata
-
+- Tehtävät, joissa sävellaji pitää tunnistaa etumerkkien perusteella
