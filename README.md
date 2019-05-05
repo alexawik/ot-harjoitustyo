@@ -18,6 +18,8 @@ Kirjautuneet käyttäjät vastaavat kysymyksiin sävellajien etumerkeistä ja sa
 
 [Viikko 6](https://github.com/alexawik/ot-harjoitustyo/releases/tag/viikko6)
 
+[Loppupalautus](https://github.com/alexawik/ot-harjoitustyo/releases/tag/Loppupalautus)
+
 ## Komentorivikomennot
 
 ### Käynnistys
