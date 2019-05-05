@@ -1,4 +1,4 @@
-# Tehtäväsovellus
+# Sävellajisovellus
 
 Kirjautuneet käyttäjät vastaavat kysymyksiin sävellajien etumerkeistä ja saavat tästä pisteitä. Admin-salasanalla kirjautuva voi nähdä luettelon kirjautuneista käyttäjistä ja heidän pistemääristään.
 
