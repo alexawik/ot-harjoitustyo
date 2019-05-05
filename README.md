@@ -48,6 +48,7 @@ mvn jxr:jxr checkstyle:checkstyle
 ```
 mvn javadoc:javadoc
 ```
+Javadoc selaimessa: target/site/apidocs/index.html
 
 ### Jarin generointi
 

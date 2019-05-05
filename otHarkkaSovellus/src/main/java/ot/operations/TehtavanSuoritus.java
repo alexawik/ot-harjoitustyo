@@ -12,7 +12,7 @@ public class TehtavanSuoritus {
      * Asettaa tehtävään suoritettavan sävellajin
      * sävellaji-listasta
      * 
-     * @param slajit
+     * @param slajit metodin käyttämä sävellaji-lista
      */
     public void setSuoritettava(Savellajit slajit) {
         this.suoritettava = slajit.satunnainenSavellaji();

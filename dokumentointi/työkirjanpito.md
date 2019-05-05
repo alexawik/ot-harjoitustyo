@@ -25,4 +25,5 @@
 |  | 2h | Arkkitehtuurikuvauksen ja muun dokumentaation päivittäminen |
 |  | 2h | Testikattavuutta, debugausta |
 |  | 1h | Sekvenssikaavioiden luontia |
-| Yht. | 39h |
+| 5.5. | 2h | Testidokumentin luonti, työn viimeistely |
+| Yht. | 41h |

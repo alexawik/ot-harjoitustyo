@@ -122,7 +122,7 @@ public class Kayttajat {
     /**
      * Asettaa konstruktorissa annetun käyttäjän ohjelman kirjautujaksi
      * 
-     * @param kayttaja 
+     * @param kayttaja kirjautujaksi asetettava käyttäjä
      */
     public void setKirjautuja(Kayttaja kayttaja) {
         this.kirjautuja = kayttaja;
