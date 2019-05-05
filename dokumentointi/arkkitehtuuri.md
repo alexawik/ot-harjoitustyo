@@ -1,17 +1,19 @@
-## Ohjelman rakenne
+# Arkkitehtuurikuvaus
+
+## Rakenne
 
 ### Pakkaukset
 Ohjelman pakkausrakenne:
 
 <img src="https://github.com/alexawik/ot-harjoitustyo/blob/master/dokumentointi/images/packages.jpg" width="300">
 
-### Luokkakaavio
+### Luokkien väliset yhteydet
 
 Ohjelman luokkien väliset suhteet ja attribuutit:
 
 <img src="https://yuml.me/1eacb2c9.jpg">
 
-### Toiminnallisuus
+## Toiminnallisuus
 
 Keskeisimmät toiminnallisuudet:
 
@@ -30,4 +32,4 @@ Ohjelma lukee tarvitsemansa sävellajit tekstitiedostosta jota ei voi ohjelmasta
 
 ### Rakenteen heikkoudet
 
-Käyttöliittymässä jonkin verran toiminnallisuutta jonka voisi refaktoroida ulkopuolelle. Tällaisenaan sovelluksen käyttötarkoituksia ei voi suuresti laajentaa ilman rakenteellisia muutoksia. Olisi myös mielekkäämpää jos sävellajit luettaisiin db- eikä txt-tiedostosta.
+Käyttöliittymässä jonkin verran sovelluslogiikkaa jonka voisi refaktoroida ulkopuolelle. Tällaisenaan sovelluksen käyttötarkoituksia ei voi suuresti laajentaa ilman rakenteellisia muutoksia. Olisi myös mielekkäämpää jos sävellajit luettaisiin db- eikä txt-tiedostosta.
