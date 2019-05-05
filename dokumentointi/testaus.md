@@ -1,13 +1,13 @@
 # Testausdokumentti
 
-Ohjelman toimivuutta on testattu sekä automatisoidusti JUnit-testien avulla että manuaalisesti järjestelmätasolla.
+Ohjelman toimivuutta on testattu sekä automatisoidusti JUnit-testien avulla että manuaalisesti järjestelmätasolla. Käyttöliittymänä on toiminut Windows yhdistettynä Git Bashiin.
 
 ## Sovelluslogiikan testaus
 
 Sovelluksen toimintaa on testattu testiluokkien KayttajatTest, SavellajitTest ja TehtavanSuoritusTest avulla.
 Nämä ovat pakkauksen ot.operations luokkia testaavia JUnit-testejä, joidenka kautta myös pakkauksen ot.domain luokkien toimivuutta on testattu.
 
-### Testauskattavuus
+### Testikattavuus
 
 Käyttöliittymän ulkopuolella testauksen rivikattavuus on 94% ja haarautumakattavuus 95%. Testaamatta jäävät try-catch -tilanteet, joissa tiedostoa ei voida lukea.
 
