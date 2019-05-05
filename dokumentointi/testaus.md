@@ -11,7 +11,8 @@ Nämä ovat pakkauksen ot.operations luokkia testaavia JUnit-testejä, joidenka 
 
 Käyttöliittymän ulkopuolella testauksen rivikattavuus on 94% ja haarautumakattavuus 95%. Testaamatta jäävät try-catch -tilanteet, joissa tiedostoa ei voida lukea.
 
-<img src="">
+<img 
+src="https://github.com/alexawik/ot-harjoitustyo/blob/master/dokumentointi/images/testikattavuus.png">
 
 ## Järjestelmätestaus
 
